@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id = "casa1" class = "entidad.Casa">
+		<property name="persona">
+			<bean id = "Persona1" class = "entidad.Persona">
+				<property name="nombre" value="Pedro"></property>
+				<property name="edad" value="45"></property>
+				<property name="dni" value="43434343p"></property>
+			</bean>
+		</property>
+		<property name="direccion">
+			<bean class = "entidad.Direccion">
+				<property name="nombreVia" value="Delfin"></property>
+				<property name="tipoVia" value="Via"></property>
+				<property name="cp" value="28434"></property>
+			</bean>
+		</property>
+		<property name="precio" value="250000"></property>
+		<property name="listaHabitaciones">
+			<bean id="listaHabitaciones1" class="java.util.Arraylist">
+				<constructor-arg>
+					<list>
+						<bean id="" class="entidad.Habitacion">
+							<property name="m2" value="30"></property>
+							<property name="tipoHabitacion" value="Dormitorio"></property>
+						</bean>
+						<bean id="habitacion2" class="entidad.Habitacion">
+							<property name="m2" value="20"></property>
+							<property name="tipoHabitacion" value="Salon"></property>
+						</bean>
+						<bean id="habitacion3" class="entidad.Habitacion">
+							<property name="m2" value="18"></property>
+							<property name="tipoHabitacion" value="Cocina"></property>
+						</bean>
+						<bean id="habitacion4" class="entidad.Habitacion">
+							<property name="m2" value="10"></property>
+							<property name="tipoHabitacion" value="Baño"></property>
+						</bean>
+					</list>
+				</constructor-arg>
+			</bean>
+		</property>
+		<property name="listaPersonas">
+			<bean id="listaPersonas1" class="java.util.Arraylist">
+				<constructor-arg>
+					<list>
+						<bean id = "Persona2" class = "entidad.Persona">
+							<property name="nombre" value="Andrea"></property>
+							<property name="edad" value="43"></property>
+							<property name="dni" value="43433343p"></property>
+						</bean>
+						<bean id = "Persona3" class = "entidad.Persona">
+							<property name="nombre" value="Antonio"></property>
+							<property name="edad" value="14"></property>
+							<property name="dni" value="43434443p"></property>
+						</bean>
+						<bean id = "Persona4" class = "entidad.Persona">
+							<property name="nombre" value="Juana"></property>
+							<property name="edad" value="17"></property>
+							<property name="dni" value="43454343p"></property>
+						</bean>
+					</list>
+				</constructor-arg>
+			</bean>
+		</property>
+	</bean>
+</beans>

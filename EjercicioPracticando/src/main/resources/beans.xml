@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="email2" class="com.example.demo.modelo.entidad.Email">
+	
+		<property name="id" value="2"></property>
+		<property name="destinatario" value="Juan"></property>
+		<property name="remitente" value="Pedro"></property> 
+	
+	</bean>
+	
+	<bean id="email3" class="com.example.demo.modelo.entidad.Email">
+	
+		<property name="id" value="3"></property>
+		<property name="destinatario" value="Alberto Soriano"></property>
+		<property name="remitente" value="Alejandro García"></property>
+	
+	</bean>
+	
+	<bean id="autor2" class="com.example.demo.modelo.entidad.Autor">
+		
+		<property name="id" value="2"></property>
+		<property name="nombre" value="Federico"></property>
+		<property name="edad" value="56"></property>
+	
+	</bean>
+	
+	<bean id="libro2" class="com.example.demo.modelo.entidad.Libro">
+	
+		<property name="isbn" value="dfgdsfg3434"></property>
+		<property name="editorial" value="dfgdsfg3434"></property>
+		<property name="autor" ref="autor2"></property>
+		
+	
+	</bean>
+	
+	
+	
+</beans>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 
+	En este fichero vamos a crear todos los objetos
+	que queramos que sean gestionados por el contexto de
+	Spring, es decir aplicar la inversion de control o 
+	tambien llamada IoC
+	
+	Un objeto spring (bean) se crea con la etiqueta "bean" y al 
+	menos hay que darle 2 atributos, el id, que debe de ser
+	unico y la clase de la cual hay que crear el objeto 
+	
+	El ciclo de vida de este objeto va a ser gestionado por
+	spring y por defecto el ciclo de vida sera "singleton"
+	que es que el objeto existira siempre en la aplicacion,
+	es decir sera unico
+	
+	Ahora yo como programador no tengo porque preocuparme
+	de estar referenciado siempre este objeto
+	
+	Ademas el objeto deja de ser anomimo, y su identificador
+	es el id
+	-->
+	<bean id="persona1" class="entidad.Persona"></bean>
+	
+	<!-- 
+	Dentro del contexto podemos crear todos los objetos que queramos
+	y podemos alterar sus propiedades(atributos) en este fichero
+	xml. Esto podremos hacerlo siempre y cuando tenga estructura
+	JavaBean
+	 -->
+	 
+	 <bean id="persona2" class="entidad.Persona">
+	 	<property name="nombre" value="Ernion Güesley"></property>
+	 	<property name="edad" value="22"></property>
+	 	<property name="peso" value="55.3"></property>
+	 </bean>
+</beans>
